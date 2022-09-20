@@ -20,6 +20,7 @@ import { ModalScreen } from "../screens/ModalScreen";
 import { NotFoundScreen } from "../screens/NotFoundScreen";
 import { TabTwoScreen } from "../screens/TabTwoScreen";
 import { TabOneScreen } from "../screens/TabOneScreen";
+import { ProfileScreen } from "../screens/ProfileScreen";
 import {
   RootStackParamList,
   RootTabParamList,
@@ -88,18 +89,27 @@ function BottomTabNavigator() {
         name="TabOne"
         component={TabOneScreen}
         options={{
-          title: "Eksempel 1",
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: "Hjem",
+          tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
         }}
       />
       <BottomTab.Screen
         name="TabTwo"
         component={TabTwoScreen}
         options={{
-          title: "Eksempel 2",
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: "Scoreboard",
+          tabBarIcon: ({ color }) => <TabBarIcon name="list" color={color} />,
         }}
       />
+      <BottomTab.Screen
+        name="TabThree"
+        component={ProfileScreen}
+        options={{
+          title: "Profil",
+          tabBarIcon: ({ color }) => <TabBarIcon name="user" color={color} />,
+        }}
+      />  
+
     </BottomTab.Navigator>
   );
 }

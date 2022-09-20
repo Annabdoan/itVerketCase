@@ -27,8 +27,12 @@ export const TabTwoScreen = ({ navigation }: RootTabScreenProps<"TabTwo">) => {
 
   const keyExtractor = (employee: Employee) => employee.name;
 
+  const image = require("../assets/images/scoreboard.png");
+
   return (
-    <View>
+    <Image source={image} style={{width:420, height:500}}/> 
+
+    /*<View>
       {employeeResult.error ? (
         <Text style={styles.title}>{employeeResult.error}</Text>
       ) : employeeResult.loading ? (
@@ -42,7 +46,7 @@ export const TabTwoScreen = ({ navigation }: RootTabScreenProps<"TabTwo">) => {
           snapToInterval={IMAGE_WIDTH}
         />
       )}
-    </View>
+    </View>*/
   );
 };
 
