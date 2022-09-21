@@ -49,15 +49,19 @@ export const TabTwoScreen = ({ navigation }: RootTabScreenProps<"TabTwo">) => {
   });*/
 
   const image = require("../assets/images/scoreboard.png");
+  const image2 = require("../assets/images/profil.png");
+
 
   return (
     <>
     
-    <Button_swipe onPress={() => Alert.alert("Hello world")} title={"Name"}/>
+    <Image source={image2} style={{width:420, height:630}}/>
 
-    <View style={styles.screenContainer}>
+    {/* <Button_swipe onPress={() => Alert.alert("Hello world")} title={"Name"}/> */}
+
+    {/* <View style={styles.screenContainer}>
       <Button title="Hey there!" />
-    </View>
+    </View> */}
 
     </>
 
