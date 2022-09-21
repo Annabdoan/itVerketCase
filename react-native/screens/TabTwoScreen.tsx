@@ -1,9 +1,10 @@
 import React from "react";
-import { Dimensions, FlatList, Image, StyleSheet } from "react-native";
+import { Alert, Button, Dimensions, FlatList, Image, StyleSheet, TouchableOpacity } from "react-native";
 
 import { Text, View } from "../components/Themed";
 import { Employee, useFetchEmployees } from "../hooks/useFetchEmployees";
 import { RootTabScreenProps } from "../types";
+import  Button_swipe  from "../components/Button_swipe";
 
 const IMAGE_WIDTH = Dimensions.get("window").width;
 const IMAGE_HEIGHT = IMAGE_WIDTH * 1.3;
@@ -11,7 +12,8 @@ const IMAGE_HEIGHT = IMAGE_WIDTH * 1.3;
 export const TabTwoScreen = ({ navigation }: RootTabScreenProps<"TabTwo">) => {
   const employeeResult = useFetchEmployees();
 
-  const renderEmployee = ({ item }: { item: Employee }) => {
+
+  /*const renderEmployee = ({ item }: { item: Employee }) => {
     return (
       <View style={{ flexDirection: "column" }}>
         <Image
@@ -23,14 +25,43 @@ export const TabTwoScreen = ({ navigation }: RootTabScreenProps<"TabTwo">) => {
         <Text> {item.gender}</Text>
       </View>
     );
-  };
+  };*/
 
-  const keyExtractor = (employee: Employee) => employee.name;
+  //const keyExtractor = (employee: Employee) => employee.name;
+
+
+  /*const styles = StyleSheet.create({
+    // ...
+    appButtonContainer: {
+      elevation: 8,
+      backgroundColor: "#009688",
+      borderRadius: 10,
+      paddingVertical: 10,
+      paddingHorizontal: 12
+    },
+    appButtonText: {
+      fontSize: 18,
+      color: "#fff",
+      fontWeight: "bold",
+      alignSelf: "center",
+      textTransform: "uppercase"
+    }
+  });*/
 
   const image = require("../assets/images/scoreboard.png");
 
   return (
-    <Image source={image} style={{width:420, height:500}}/> 
+    <>
+    
+    <Button_swipe onPress={() => Alert.alert("Hello world")} title={"Name"}/>
+
+    <View style={styles.screenContainer}>
+      <Button title="Hey there!" />
+    </View>
+
+    </>
+
+    // <Image source={image} style={{width:420, height:500}}/> 
 
     /*<View>
       {employeeResult.error ? (
@@ -51,6 +82,11 @@ export const TabTwoScreen = ({ navigation }: RootTabScreenProps<"TabTwo">) => {
 };
 
 const styles = StyleSheet.create({
+  screenContainer: {
+    flex: 1,
+    justifyContent: "center",
+    padding: 16
+  },
   image: {
     width: IMAGE_WIDTH,
     height: IMAGE_HEIGHT,
@@ -58,5 +94,6 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 20,
     fontWeight: "bold",
-  },
+  }
+
 });

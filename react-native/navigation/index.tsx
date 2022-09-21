@@ -63,7 +63,7 @@ function RootNavigator() {
         options={{ title: "Oops!" }}
       />
       <Stack.Group screenOptions={{ presentation: "modal" }}>
-        <Stack.Screen name="Modal" component={ModalScreen} />
+        <Stack.Screen name="Scoreboard" component={ModalScreen} />
       </Stack.Group>
     </Stack.Navigator>
   );
@@ -97,8 +97,8 @@ function BottomTabNavigator() {
         name="TabTwo"
         component={TabTwoScreen}
         options={{
-          title: "Scoreboard",
-          tabBarIcon: ({ color }) => <TabBarIcon name="list" color={color} />,
+          title: "Swipe",
+          tabBarIcon: ({ color }) => <TabBarIcon name="fire" color={color} />,
         }}
       />
       <BottomTab.Screen

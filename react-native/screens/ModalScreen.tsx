@@ -1,24 +1,22 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { Button, Platform, StyleSheet } from "react-native";
+import { Button, Platform, StyleSheet, Image } from "react-native";
 
 import { Text, View } from "../components/Themed";
 import { RootStackScreenProps } from "../types";
 
 export const ModalScreen = ({
   navigation,
-  route: {
+  /*route: {
     params: { employee },
-  },
+  },*/
 }: RootStackScreenProps<"Modal">) => {
   const goBack = () => navigation.goBack();
 
-  return (
-    <View style={styles.container}>
-      <Text>{employee.name}</Text>
+  const image = require("../assets/images/scoreboard_full.png")
 
-      <Button title="Tilbake" onPress={goBack} />
-    </View>
+  return (
+    <Image source={image} style={{width:420, height:700}}/> 
   );
 };
 
