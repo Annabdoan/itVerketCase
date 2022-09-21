@@ -5,6 +5,8 @@ import { Text, View } from "../components/Themed";
 import { Employee, useFetchEmployees } from "../hooks/useFetchEmployees";
 import { RootTabScreenProps } from "../types";
 import  Button_swipe  from "../components/Button_swipe";
+import Button_image from "../components/Button_image";
+
 
 const IMAGE_WIDTH = Dimensions.get("window").width;
 const IMAGE_HEIGHT = IMAGE_WIDTH * 1.3;
@@ -48,14 +50,24 @@ export const TabTwoScreen = ({ navigation }: RootTabScreenProps<"TabTwo">) => {
     }
   });*/
 
-  const image = require("../assets/images/scoreboard.png");
+  const image = require("../assets/images/knapp.png");
   const image2 = require("../assets/images/profil.png");
+  const imageLogo = require("../assets/images/logo.png");
 
 
   return (
     <>
-    
-    <Image source={image2} style={{width:420, height:630}}/>
+    <Image source={imageLogo} style={{width:420, height:100}}/>
+
+
+    <Text/>
+    <Text/>
+    <Text/>
+    <Text/>
+    <Text/>
+
+    <Button_swipe onPress={() => navigation.navigate("Swipe_screen")} title={"BLI KJENT MED DINE KOLLEGAER!"}/>
+
 
     {/* <Button_swipe onPress={() => Alert.alert("Hello world")} title={"Name"}/> */}
 

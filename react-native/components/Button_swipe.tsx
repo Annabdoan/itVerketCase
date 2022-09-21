@@ -11,7 +11,7 @@ const Button_swipe = ({ onPress, title }: {onPress: any, title:any}) => (
     // ...
     appButtonContainer: {
       elevation: 8,
-      backgroundColor: "#009688",
+      backgroundColor: "#eb7d34",
       borderRadius: 10,
       paddingVertical: 10,
       paddingHorizontal: 12

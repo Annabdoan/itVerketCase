@@ -21,12 +21,15 @@ import { NotFoundScreen } from "../screens/NotFoundScreen";
 import { TabTwoScreen } from "../screens/TabTwoScreen";
 import { TabOneScreen } from "../screens/TabOneScreen";
 import { ProfileScreen } from "../screens/ProfileScreen";
+import { FrontScreen } from "../screens/FrontScreen";
+
 import {
   RootStackParamList,
   RootTabParamList,
   RootTabScreenProps,
 } from "../types";
 import LinkingConfiguration from "./LinkingConfiguration";
+import { SwipeScreen } from "../screens/SwipeScreen";
 
 export default function Navigation({
   colorScheme,
@@ -64,6 +67,14 @@ function RootNavigator() {
       />
       <Stack.Group screenOptions={{ presentation: "modal" }}>
         <Stack.Screen name="Scoreboard" component={ModalScreen} />
+      </Stack.Group>
+
+      <Stack.Group screenOptions={{ presentation: "modal" }}>
+        <Stack.Screen name="Premie" component={FrontScreen} />
+      </Stack.Group>
+
+      <Stack.Group screenOptions={{ presentation: "modal" }}>
+        <Stack.Screen name="Swipe_screen" component={SwipeScreen} />
       </Stack.Group>
     </Stack.Navigator>
   );

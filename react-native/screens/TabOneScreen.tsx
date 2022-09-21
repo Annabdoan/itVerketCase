@@ -6,6 +6,7 @@ import { Text, View } from "../components/Themed";
 import { Employee, useFetchEmployees } from "../hooks/useFetchEmployees";
 import { RootTabScreenProps } from "../types";
 import Button_image from "../components/Button_image";
+import  Button_swipe  from "../components/Button_swipe";
 import { CountdownCircleTimer } from 'react-native-countdown-circle-timer'
 
 
@@ -17,6 +18,7 @@ export const TabOneScreen = ({ navigation }:any) => {
 
   const image = require("../assets/images/ukens_topp3.png");
   const image2 = require("../assets/images/logo.png")
+  const image3 = require("../assets/images/premie.png")
 
   
   //const gotoScoreboard = () => () => navigation.navigate( "Modal");
@@ -24,19 +26,15 @@ export const TabOneScreen = ({ navigation }:any) => {
 
   return (
     <>
-    <Image source={image2} style={{width:420, height:100, backgroundColor:"#ffffff"}}
-    />
-
+    
+    <Image source={image2} style={{width:420, height:100, backgroundColor:"#ffffff"}}/>
     <Button_image onPress={() => navigation.navigate("Scoreboard")} picture={image}/>
 
-    <CountdownCircleTimer
-    isPlaying
-    duration={7}
-    colors={['#004777', '#F7B801', '#A30000', '#A30000']}
-    colorsTime={[7, 5, 2, 0]}
-  >
-    {({ remainingTime }) => <Text>{remainingTime}</Text>}
-  </CountdownCircleTimer>
+    <Text/>
+    <Text/>
+    
+    <Button_swipe onPress={() => navigation.navigate("Premie")} title={"UKENS PREMIE"}/>
+ 
 
     </>
   );

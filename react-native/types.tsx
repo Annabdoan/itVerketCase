@@ -18,6 +18,8 @@ export type RootStackParamList = {
     employee: Employee;
   };
   NotFound: undefined;
+  Premie: undefined;
+  Swipe_screen: undefined;
 };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> =
