@@ -11,11 +11,11 @@ export const ProfileScreen = ({ navigation }: RootTabScreenProps<"TabThree">) =>
   const gotoDetails = (employee: Employee) => () =>
     navigation.navigate("Modal", { employee });
 
-    const image = require("../assets/images/tomhenrik.png");
+    const image = require("../assets/images/RiktigTom.png");
 
   return (
     <>
-    <Image source={image} style={{width:420, height:750, resizeMode:"center", backgroundColor:"#ffffff"}}/> 
+    <Image source={image} style={{width:420, height:750, resizeMode:"contain", backgroundColor:"#ffffff"}}/> 
 
     <Button
       title={""}
