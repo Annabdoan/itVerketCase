@@ -18,10 +18,10 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "no.itverket.itdagene.reactnative"
+      "bundleIdentifier": "no.tinderVerket.itdagene.reactnative"
     },
     "android": {
-      "package": "no.itverket.itdagene.reactnative",
+      "package": "no.tinderVerket.itdagene.reactnative",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
